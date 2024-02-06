@@ -4,65 +4,88 @@ let nomeDia = '';
 mes.onchange = () => {
     switch(mes.value.toLowerCase()){
         case 'janeiro':
-            mes = 'Rei'
+            nomeMes = 'Rei'
         break;
         case 'fevereiro':
-            mes = 'Mô'
+            nomeMes = 'Mô'
         break;
         case 'março':
-            mes = 'Mô'
+            nomeMes = 'Cupido'
         break;
         case 'abril':
-            mes = 'Mô'
+            nomeMes = 'Apaixonado'
         break;
         case 'maio':
-            mes = 'Mô'
+            nomeMes = 'Pagodeiro'
         break;
         case 'junho':
-            mes = 'Mô'
+            nomeMes = 'Cara perfeito'
         break;
         case 'julho':
-            mes = 'Mô'
+            nomeMes = 'Mensageiro'
         break;
         case 'agosto':
-            mes = 'Mô'
+            nomeMes = 'Perturbado'
         break;
         case 'setembro':
-            mes = 'Mô'
+            nomeMes = 'Gueri gueri'
         break;
         case 'outubro':
-            mes = 'Mô'
+            nomeMes = 'Coração'
         break;
         case 'novembro':
-            mes = 'Mô'
+            nomeMes = 'Linda voz'
         break;
         case 'dezembro':
-            mes = 'Mô'
+            nomeMes = 'Criado mudo'
         break;
     }
 }
 dia.onchange = () =>{
-    if (dia.value >= 1 && dia.value < 3){
-        dia = 'que tanto fez ou tanto faz'
-    } else if (dia.value >= 1 && dia.value < 3){
-        dia = 'que desabou o barraco' 
-    } else if (dia.value >= 1 && dia.value < 3){
-        dia = 'que desabou o barraco' 
-    } else if (dia.value >= 1 && dia.value < 3){
-        dia = 'que desabou o barraco' 
-    } else if (dia.value >= 1 && dia.value < 3){
-        dia = 'que desabou o barraco' 
-    } else if (dia.value >= 1 && dia.value < 3){
-        dia = 'que desabou o barraco' 
-    } else if (dia.value >= 1 && dia.value < 3){
-        dia = 'que desabou o barraco' 
-    } else if (dia.value >= 1 && dia.value < 3){
-        dia = 'que desabou o barraco' 
-    } else if (dia.value >= 1 && dia.value < 3){
-        dia = 'que desabou o barraco' 
+    if (dia.value >= 1 && dia.value <= 3){
+        nomeDia = ' que tanto fez ou tanto faz'
+    } else if (dia.value >= 4 && dia.value <= 6){
+        nomeDia = ' que desabou o barraco' 
+    } else if (dia.value >= 7 && dia.value <= 9){
+        nomeDia = ' que largou o freio' 
+    } else if (dia.value >= 10 && dia.value <= 12){
+        nomeDia = ' que quer futicar' 
+    } else if (dia.value >= 13 && dia.value <= 15){
+        nomeDia = ' que tem fogo na roupa' 
+    } else if (dia.value >= 16 && dia.value <= 18){
+        nomeDia = ' que se apaixonou pela pessoa errada' 
+    } else if (dia.value >= 19 && dia.value <= 21){
+        nomeDia = ' que desliga e vem depressa' 
+    } else if (dia.value >= 22 && dia.value <= 24){
+        nomeDia = ' que está à deriva' 
+    } else if (dia.value >= 25 && dia.value <= 27){
+        nomeDia = ' que segura o samba' 
     } else {
-
+        nomeDia = ' que ninguém ama'
     }
+
+    nome.innerHTML = `${nomeMes + nomeDia}`;
 }
 
-nome.innerHTML = `${nomeMes} ${nomeDia}`;
+// const meses = [
+//     'Rei', 'Mô', 'Cupido', 'Apaixonado', 'Pagodeiro', 'Cara perfeito',
+//     'Mensageiro', 'Perturbado', 'Gueri gueri', 'Coração', 'Linda voz', 'Criado mudo'
+// ];
+
+// const dias = [
+//     'que tanto fez ou tanto faz', 'que desabou o barraco', 'que largou o freio',
+//     'que quer futicar', 'que tem fogo na roupa', 'que se apaixonou pela pessoa errada',
+//     'que desliga e vem depressa', 'que está à deriva', 'que segura o samba',
+//     'que ninguém ama'
+// ];
+
+// mes.onchange = () => {
+//     const index = mes.selectedIndex;
+//     nomeMes = meses[index];
+// };
+
+// dia.onchange = () => {
+//     const index = dia.value - 1;
+//     nomeDia = dias[index] || 'que ninguém ama';
+//     nome.innerHTML = `${nomeMes} ${nomeDia}`;
+// };
