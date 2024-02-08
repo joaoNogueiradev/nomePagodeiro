@@ -40,7 +40,10 @@ mes.onchange = () => {
             nomeMes = 'Criado mudo'
         break;
     }
+
+    nome.innerHTML = `${nomeMes + nomeDia}`;
 }
+
 dia.onchange = () =>{
     if (dia.value >= 1 && dia.value <= 3){
         nomeDia = ' que tanto fez ou tanto faz'
@@ -80,12 +83,12 @@ dia.onchange = () =>{
 // ];
 
 // mes.onchange = () => {
-//     const index = mes.selectedIndex;
-//     nomeMes = meses[index];
+//     const indice = mes.selectedIndex;
+//     nomeMes = meses[indice];
 // };
 
 // dia.onchange = () => {
-//     const index = dia.value - 1;
-//     nomeDia = dias[index] || 'que ninguém ama';
+//     const indice = dia.value - 1;
+//     nomeDia = dias[indice] || 'que ninguém ama';
 //     nome.innerHTML = `${nomeMes} ${nomeDia}`;
 // };
